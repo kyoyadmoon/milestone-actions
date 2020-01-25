@@ -1,0 +1,23 @@
+name: 'Create a Milestone'
+description: 'Create a new milestone with the given title, description and due date.'
+branding:
+  icon: 'flag'
+  color: 'yellow'
+inputs:
+  title:
+    description: 'The title (version) for the milestone'
+    required: true
+  description:
+    description: 'An optional description for the milestone'
+    required: false
+  due_on:
+    description: 'An optional timestamp for due date of the milestone'
+    required: false
+outputs:
+  number:
+    description: 'The number of the new created milestone'
+  html_url:
+    description: 'The html url of the new created milestone'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

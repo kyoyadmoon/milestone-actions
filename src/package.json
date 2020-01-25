@@ -1,0 +1,29 @@
+{
+  "name": "create-milestone",
+  "version": "1.0.0",
+  "description": "A GitHub Action for create-milestone",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyoyadmoon/create-milestone-action.git"
+  },
+  "author": "dmoon.t@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyoyadmoon/create-milestone-action/issues"
+  },
+  "homepage": "https://github.com/kyoyadmoon/create-milestone-action#readme",
+  "dependencies": {
+    "await-exec": "^0.1.2",
+    "axios": "^0.19.2",
+    "loglevel": "^1.6.1",
+    "moment": "^2.24.0",
+    "request-promise": "^4.2.4"
+  },
+  "devDependencies": {
+    "standard": "^12.0.1"
+  }
+}
