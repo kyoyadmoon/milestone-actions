@@ -71,7 +71,7 @@ jobs:
 
       - name: 'Create new milestone'
         id: create-milestone
-        uses: kyoyadmoon/milestone-actions@v1
+        uses: kyoyadmoon/milestone-actions@v1.0.0
         with:
           title: "1.7.0"
           description: "test desc"
