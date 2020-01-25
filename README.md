@@ -28,7 +28,10 @@ An optional description for the milestone.
 ### due_on
 
 An optional due date for the milestone.
-You can use `date` command to create due date which format as `timestamp in seconds`.For example: `date -d '13 days' '+%s'`
+
+You can use `date` command to create due date which format as `timestamp in seconds`.
+
+For example: `date -d '13 days' '+%s'`
 
 * *Required*: `No`
 * *Type*: `string` (`timestamp in seconds`)
