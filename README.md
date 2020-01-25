@@ -5,7 +5,7 @@ A GitHub Action which can create milestone with the given title, description and
 This is the [GitHub API](https://developer.github.com/v3/issues/milestones/#create-a-milestone) which this repo used.
 
 This GitHub Action is inspired by [github-action-create-milestone](https://github.com/WyriHaximus/github-action-create-milestone).
-The action is great but not support to setting due date.So I decided to write one.
+The action is great but does not support setting due date.So I decided to write one.
 
 ## Options
 

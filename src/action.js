@@ -5,6 +5,12 @@ const moment = require('moment');
 const axios = require('axios');
 const { exec } = require('child_process');
 
+var instance = axios.create({
+  validateStatus: function (status) {
+    return status == 200;
+  }
+});
+
 // Uncomment this if you want to check if your local env variables are being set
 // console.dir(process.env)
 
@@ -42,6 +48,9 @@ async function createMilestone() {
         'Authorization': `Bearer ${GITHUB_TOKEN}`,
         'Content-Type': 'application/json',
       },
+      validateStatus: function (status) {
+        return status >= 201 && status < 300; // default
+      },
       data: {
         title: MILESTONE_TITLE,
         description: MILESTONE_DESCRIPTION || '',
@@ -62,8 +71,6 @@ async function createMilestone() {
     log.info('number', number);
 
     const setOutputsCmd = `
-      echo ::set-output name=banana::yellow
-      echo ::set-output name=id::${id}
       echo ::set-output name=html_url::${html_url}
       echo ::set-output name=number::${number}
     `;
@@ -79,8 +86,9 @@ async function createMilestone() {
 
   } catch (error) {
     log.error(error);
-    throw error;
+    const setErrorMessage = `echo ::error file=action.js::${error}`;
+    exec(setErrorMessage);
   }
 }
 
-createMilestone().catch(e => { throw e });
+createMilestone();
