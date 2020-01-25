@@ -5,12 +5,6 @@ const moment = require('moment');
 const axios = require('axios');
 const { exec } = require('child_process');
 
-var instance = axios.create({
-  validateStatus: function (status) {
-    return status == 200;
-  }
-});
-
 // Uncomment this if you want to check if your local env variables are being set
 // console.dir(process.env)
 
@@ -75,19 +69,17 @@ async function createMilestone() {
       echo ::set-output name=number::${number}
     `;
 
-    exec(setOutputsCmd, (error, stdout, stderr) => {
+    exec(setOutputsCmd, (err, stdout, stderr) => {
       console.log(`${stdout}`);
       console.log(`${stderr}`);
-      if (error !== null) {
-        console.log(`exec error: ${error}`);
-        throw error;
+      if (err !== null) {
+        throw err;
       }
     });
 
   } catch (error) {
     log.error(error);
-    const setErrorMessage = `echo ::error file=action.js::${error}`;
-    exec(setErrorMessage);
+    throw error;
   }
 }
 
