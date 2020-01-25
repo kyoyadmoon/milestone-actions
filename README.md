@@ -1,6 +1,10 @@
 # Create Milestone Action
 
-A GitHub Action to create milestone by using [GitHub API](https://developer.github.com/v3/issues/milestones/#create-a-milestone)
+A GitHub Action which can create milestone with the given title, description and due date.
+
+This is the [GitHub API](https://developer.github.com/v3/issues/milestones/#create-a-milestone) which this repo used.
+
+This GitHub Action is inspired by [github-action-create-milestone](https://github.com/WyriHaximus/github-action-create-milestone) which could not create milestone with due date.
 
 ## Options
 
@@ -24,10 +28,10 @@ An optional description for the milestone.
 ### due_on
 
 An optional due date for the milestone.
-You can use `date` command to create due date in timestamp.For example: `date -d '13 days' '+%s'`
+You can use `date` command to create due date which format as `timestamp in seconds`.For example: `date -d '13 days' '+%s'`
 
 * *Required*: `No`
-* *Type*: `string`
+* *Type*: `string` (`timestamp in seconds`)
 
 ## Output
 
