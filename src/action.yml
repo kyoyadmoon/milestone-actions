@@ -1,4 +1,4 @@
-name: 'Create a Milestone'
+name: 'Milestone Actions'
 description: 'Create a new milestone with the given title, description and due date.'
 branding:
   icon: 'flag'

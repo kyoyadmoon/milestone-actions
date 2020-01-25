@@ -1,4 +1,4 @@
-# Create Milestone Action
+# Milestone Actions
 
 A GitHub Action which can create milestone with the given title, description and due date.
 
