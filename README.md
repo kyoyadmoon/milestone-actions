@@ -82,7 +82,6 @@ jobs:
           due_on: "${{ steps.set-due-on.outputs.due_on }}"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          GITHUB_REPOSITORY: "${{ github.repository }}"
 
       - name: echo Milestone number
         run: echo ${{ steps.create-milestone.outputs.number }}
