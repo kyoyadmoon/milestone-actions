@@ -20,7 +20,7 @@
     "await-exec": "^0.1.2",
     "axios": "^0.19.2",
     "loglevel": "^1.6.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "request-promise": "^4.2.4"
   },
   "devDependencies": {
